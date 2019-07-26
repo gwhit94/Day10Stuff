@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Simon</title>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            display: grid;
+            grid-template-columns: 10% auto 275px 275px auto 10%;
+            grid-template-rows: 10px 275px 275px 10px auto;
+        }
+        .container{
+            height: 550px;
+            width: 550px;
+        }
+        .pad{
+            height: 275px;
+            width: 275px;
+        }
+        .middle{
+            background-color: black;
+            position: absolute;
+            top: 210px;
+            left: calc(50% - 75px);
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+        }
+        .green{
+            background-color: green;
+            grid-row-start: 2;
+            grid-row-end: 3;
+            grid-column-start: 3; 
+            grid-column-end: 4;
+
+        }
+        .red{
+
+        }
+        .blue{
+
+        }
+        .yellow{
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="pad green"></div>
+        <div class="pad red"></div> 
+        <div class="pad blue"></div>
+        <div class="pad yellow"></div>
+        <div class="middle"></div>
+    </div>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
