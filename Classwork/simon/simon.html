@@ -6,60 +6,71 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Simon</title>
     <style>
-        body {
-            margin: 0px;
-            padding: 0px;
-            display: grid;
-            grid-template-columns: 10% auto 275px 275px auto 10%;
-            grid-template-rows: 10px 275px 275px 10px auto;
+
+        .main {
+            margin-left: calc(100vw - 700px);
+            width: 700px;
+            height: 700px;
+            color: white;
+            text-align: center;
         }
-        .container{
-            height: 550px;
-            width: 550px;
+
+        .square {
+            width: 300px;
+            height: 300px;
+            border: 5px solid black;
+            float: left;
+            opacity: .6;
         }
-        .pad{
-            height: 275px;
-            width: 275px;
-        }
-        .middle{
-            background-color: black;
-            position: absolute;
-            top: 210px;
-            left: calc(50% - 75px);
-            height: 150px;
-            width: 150px;
-            border-radius: 50%;
-        }
-        .green{
+
+        .top-left {
+            border-top-left-radius: 100%;
             background-color: green;
-            grid-row-start: 2;
-            grid-row-end: 3;
-            grid-column-start: 3; 
-            grid-column-end: 4;
-
+            clear: left;
         }
-        .red{
 
+        .top-right {
+            border-top-right-radius: 100%;
+            background-color: red;
+            clear: right;
         }
-        .blue{
 
+        .bottom-left {
+            border-bottom-left-radius: 100%;
+            background-color: blue;
+            clear: left;
         }
-        .yellow{
 
+        .bottom-right {
+            border-bottom-right-radius: 100%;
+            background-color: yellow;
+            clear: right;
         }
+    
+        .black {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-color: black;
+            margin-top: 210px;
+            margin-left: 210px;
+            position: absolute;
+            line-height: 200px;
+        }
+        .active {
+            opacity: 1;
+        }
+    
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="pad green"></div>
-        <div class="pad red"></div> 
-        <div class="pad blue"></div>
-        <div class="pad yellow"></div>
-        <div class="middle"></div>
+    <div class="main">
+        <div id="green" class="square top-left"></div>
+        <div id="red" class="square top-right"></div>
+        <div id="blue" class="square bottom-left"></div>
+        <div id="yellow" class="square bottom-right"></div>
+        <div id="center" class="black">Click to Start</div>
     </div>
-
-
-
     <script src="script.js"></script>
 </body>
 </html>
